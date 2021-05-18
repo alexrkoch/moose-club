@@ -81,7 +81,7 @@ body {
   margin-top: 83px;
   height: 800px;
   background-image: url("/images/IMG_banner.jpeg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 
@@ -104,8 +104,37 @@ body {
 }
 
 //prevent scroll headbutt under header
-#home-page {
+#home-page,
+#about-page,
+#photos-page {
   margin-top: -83px;
   padding-bottom: 83px;
   display: block;
+}
+
+.about {
+  width: 600px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  padding-bottom: 1rem;
+
+  &__header {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  &__body {
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0;
+  }
+}
+
+.bottom-space {
+  height: 1000px;
 }
