@@ -105,10 +105,15 @@ body {
 
 //prevent scroll headbutt under header
 #home-page,
-#about-page,
 #photos-page {
   margin-top: -83px;
   padding-bottom: 83px;
+  display: block;
+}
+
+#about-page {
+  margin-top: -95px;
+  padding-bottom: 95px;
   display: block;
 }
 
@@ -141,13 +146,26 @@ body {
   &__header {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     line-height: 1;
   }
 }
 
-.photo-grid {
+.gallery {
+  width: 950px;
+  margin: auto;
   display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 25px;
+  &__figure {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
 }
 
 .bottom-space {
