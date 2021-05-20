@@ -75,6 +75,9 @@ body {
   &__link:hover {
     text-decoration: underline;
   }
+  &__link:last-of-type {
+    margin-right: 25px;
+  }
 }
 
 .welcome {
