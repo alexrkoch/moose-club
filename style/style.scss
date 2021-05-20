@@ -114,6 +114,7 @@ body {
   display: block;
 }
 
+//prevent scroll headbutt under header
 #about-page {
   margin-top: -95px;
   padding-bottom: 95px;
@@ -126,20 +127,22 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
 
   &__header {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     line-height: 1;
   }
 
   &__body {
-    padding-top: 0.75rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -171,6 +174,38 @@ figcaption {
   font-style: italic;
 }
 
-.bottom-space {
-  height: 1000px;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: rgb(141, 141, 141);
+  color: white;
+
+  &__copyright {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+  &__text {
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+    &--link {
+      font-size: 0.75rem;
+      text-decoration: none;
+      font-weight: normal;
+      color: white;
+    }
+    &--link:hover {
+      text-decoration: underline;
+    }
+  }
+  &__insta {
+    height: 50px;
+    width: auto;
+    color: white;
+  }
 }
