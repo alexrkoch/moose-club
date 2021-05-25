@@ -2,6 +2,7 @@
 //border: 1px red solid;
 //}
 
+// Variables
 body {
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
@@ -83,7 +84,7 @@ body {
 .welcome {
   margin-top: 83px;
   height: 800px;
-  background-image: url("https://alexrkoch.github.io/images/IMG_banner.jpeg");
+  background-image: url("/images/IMG_banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
