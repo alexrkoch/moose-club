@@ -1,16 +1,12 @@
-//* {
-//border: 1px red solid;
-//}
+@use 'resets';
+@use 'variables' as v;
 
-// Variables
 body {
-  font-family: Roboto, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
+  font-family: v.$font-stack;
 }
 
 .header {
-  background-color: white;
+  background-color: map-get(v.$background-color, main);
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -19,10 +15,9 @@ body {
 
   &__bottom-line {
     margin-top: 0.5rem;
-    margin-bottom: 0rem;
     border: none;
     height: 3px;
-    background-color: black;
+    background-color: v.$line-color;
   }
 }
 
@@ -50,8 +45,6 @@ body {
   &__title {
     font-size: 30px;
     font-weight: bold;
-    padding: 0;
-    margin: 0;
   }
   &__title-top {
     grid-area: title-top;
@@ -70,7 +63,7 @@ body {
   &__link {
     font-size: 1.25rem;
     text-decoration: none;
-    color: black;
+    color: v.$line-color;
     font-weight: bold;
   }
   &__link:hover {
@@ -91,7 +84,7 @@ body {
 
   &__header {
     font-size: 4rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: map-get(v.$background-color, banner-text);
     width: 500px;
     margin: auto;
     padding-top: 0.5rem;
@@ -103,22 +96,22 @@ body {
     font-weight: 300;
     width: 500px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: map-get(v.$background-color, banner-text);
   }
 }
 
 //prevent scroll headbutt under header
 #home-page,
 #photos-page {
-  margin-top: -83px;
-  padding-bottom: 83px;
+  margin-top: -1 * (v.$scroll-headbutt);
+  padding-bottom: v.$scroll-headbutt;
   display: block;
 }
 
 //prevent scroll headbutt under header
 #about-page {
-  margin-top: -95px;
-  padding-bottom: 95px;
+  margin-top: -1 * (v.$about-scroll-headbutt);
+  padding-bottom: v.$about-scroll-headbutt;
   display: block;
 }
 
@@ -127,7 +120,7 @@ body {
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: 1px solid v.$line-color;
   padding-bottom: 1.2rem;
 
   &__header {
@@ -181,7 +174,7 @@ figcaption {
   align-items: center;
   margin-top: 50px;
   padding: 15px;
-  background-color: rgb(141, 141, 141);
+  background-color: map-get(v.$background-color, footer);
   color: white;
 
   &__copyright {
