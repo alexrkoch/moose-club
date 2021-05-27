@@ -123,9 +123,15 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   grid-gap: 25px;
-  &__figure {
-    padding: 0;
-    margin: 0;
+
+  // see note on line 7 an index.HTML.
+  @media only screens and (max-width: 650px) {
+    display: grid;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }
 

@@ -5,6 +5,10 @@ Mobile Responsiveness:
   ☐ Adjust font sizes
   ☐ Reduce margin of about section
   ☐ Replace banner with hamburger
+  Media Queries: 
+    ☐ 990 - go to two columns for photos
+    ☐ 650 - reduce about section margins
+    ☐ 450 - full mobile
   
-  Refactoring: 
-    ☐ continue implementing accessible sizing for margins et cetera  
+Refactoring: 
+  ☐ continue implementing accessible sizing for margins et cetera  
