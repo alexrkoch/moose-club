@@ -14,10 +14,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 0.5rem;
+  padding-top: 8px;
 }
 .header__bottom-line {
-  margin-top: 0.5rem;
+  margin-top: 8px;
   border: none;
   height: 3px;
   background-color: black;
@@ -26,38 +26,21 @@ body {
 .logo-links {
   display: flex;
   justify-content: space-between;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .logo {
-  display: grid;
-  grid-template-columns: auto 100px;
-  grid-template-rows: 30px 30px;
-  grid-template-areas: "image title-top" "image title-bottom";
-  grid-gap: 5px;
-}
-.logo__image {
-  width: 65px;
-  grid-area: image;
-  border-radius: 10%;
-}
-.logo__title {
-  font-size: 1.875rem;
-  font-weight: bold;
-}
-.logo__title-top {
-  grid-area: title-top;
-}
-.logo__title-bottom {
-  grid-area: title-bottom;
+  height: 3rem;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 18.75rem;
+  margin-left: 1.5625rem;
+  margin-right: 1.5625rem;
 }
 .links__link {
   font-size: 1.25rem;
@@ -68,12 +51,9 @@ body {
 .links__link:hover {
   text-decoration: underline;
 }
-.links__link:last-of-type {
-  margin-right: 25px;
-}
 
 .welcome {
-  margin-top: 83px;
+  margin-top: 5.1875rem;
   height: 800px;
   background-image: url("/images/IMG_banner.jpeg");
   background-size: cover;
@@ -97,20 +77,15 @@ body {
 }
 
 #home-page,
+#about-page,
 #photos-page {
-  margin-top: -83px;
-  padding-bottom: 83px;
-  display: block;
-}
-
-#about-page {
-  margin-top: -95px;
-  padding-bottom: 95px;
+  margin-top: -5.1875rem;
+  padding-bottom: 5.1875rem;
   display: block;
 }
 
 .about {
-  width: 600px;
+  width: 37.5rem;
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -119,17 +94,12 @@ body {
 }
 .about__header {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1;
 }
 .about__body {
   padding-top: 1.2rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
+  line-height: 1.5;
 }
 
 .photos {

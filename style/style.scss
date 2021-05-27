@@ -12,10 +12,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 0.5rem;
+  padding-top: 8px;
 
   &__bottom-line {
-    margin-top: 0.5rem;
+    margin-top: 8px;
     border: none;
     height: 3px;
     background-color: v.$line-color;
@@ -25,41 +25,21 @@ body {
 .logo-links {
   display: flex;
   justify-content: space-between;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .logo {
-  display: grid;
-  grid-template-columns: auto 100px;
-  grid-template-rows: 30px 30px;
-  grid-template-areas:
-    "image title-top"
-    "image title-bottom";
-  grid-gap: 5px;
-
-  &__image {
-    width: 65px;
-    grid-area: image;
-    border-radius: 10%;
-  }
-  &__title {
-    font-size: f.rem(30);
-    font-weight: bold;
-  }
-  &__title-top {
-    grid-area: title-top;
-  }
-  &__title-bottom {
-    grid-area: title-bottom;
-  }
+  height: 3rem;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: f.rem(300);
+  margin-left: f.rem(25);
+  margin-right: f.rem(25);
 
   &__link {
     font-size: 1.25rem;
@@ -70,13 +50,10 @@ body {
   &__link:hover {
     text-decoration: underline;
   }
-  &__link:last-of-type {
-    margin-right: 25px;
-  }
 }
 
 .welcome {
-  margin-top: 83px;
+  margin-top: f.rem(v.$scroll-headbutt);
   height: 800px;
   background-image: url("/images/IMG_banner.jpeg");
   background-size: cover;
@@ -103,21 +80,15 @@ body {
 
 //prevent scroll headbutt under header
 #home-page,
+#about-page,
 #photos-page {
-  margin-top: -1 * (v.$scroll-headbutt);
-  padding-bottom: v.$scroll-headbutt;
-  display: block;
-}
-
-//prevent scroll headbutt under header
-#about-page {
-  margin-top: -1 * (v.$about-scroll-headbutt);
-  padding-bottom: v.$about-scroll-headbutt;
+  margin-top: f.rem(-1 * (v.$scroll-headbutt));
+  padding-bottom: f.rem(v.$scroll-headbutt);
   display: block;
 }
 
 .about {
-  width: 600px;
+  width: f.rem(600);
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -126,18 +97,13 @@ body {
 
   &__header {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1;
   }
 
   &__body {
     padding-top: 1.2rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    margin-top: 0;
+    line-height: 1.5;
   }
 }
 

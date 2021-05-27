@@ -1,6 +1,10 @@
+# use Alt+d for done, or Alt+c for cancelled
+
+Refactoring: 
+  ☐ figure out accessible sizing for margins et cetera
+
 Mobile Responsiveness:
-  ☐ Banner 
-    ☐ increase font
-    ☐ Changed thickness?
+  ☐ Replace banner with hamburger
+  ☐ Adjust font sizes
   ☐ Reduce margin of about section
   ☐ Photo gallery to one column 
