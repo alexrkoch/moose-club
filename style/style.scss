@@ -65,7 +65,11 @@ body {
     background-color: map-get(v.$background-color, banner-text);
     width: 500px;
     margin: auto;
-    padding-top: 0.5rem;
+    padding-top: 0.5remall;
+
+    @media only screen and (max-width: 800px) {
+      width: 90%;
+    }
   }
 
   &__subtitle {
@@ -75,6 +79,10 @@ body {
     width: 500px;
     margin: auto;
     background-color: map-get(v.$background-color, banner-text);
+
+    @media only screen and (max-width: 800px) {
+      width: 90%;
+    }
   }
 }
 
@@ -94,6 +102,10 @@ body {
   margin-right: auto;
   border: 1px solid v.$line-color;
   padding-bottom: 1.2rem;
+
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+  }
 
   &__header {
     text-align: center;
@@ -119,19 +131,30 @@ body {
 
 .gallery {
   width: 950px;
+  height: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 300px);
   grid-gap: 25px;
 
-  // see note on line 7 an index.HTML.
-  @media only screens and (max-width: 650px) {
-    display: grid;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
+  @media only screen and (max-width: 960px) {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5vw;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 2.5vw;
+  }
+
+  img {
+    width: 100%;
   }
 }
 
@@ -141,6 +164,7 @@ figcaption {
 }
 
 .footer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,8 +174,6 @@ figcaption {
   color: white;
 
   &__copyright {
-    padding: 0;
-    margin: 0;
     margin-bottom: 0.25rem;
   }
   &__text {
@@ -170,7 +192,7 @@ figcaption {
     }
   }
   &__insta {
-    height: 50px;
+    height: f.rem(50);
     width: auto;
     color: white;
   }
