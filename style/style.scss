@@ -63,25 +63,26 @@ body {
   &__header {
     font-size: 4rem;
     background-color: map-get(v.$background-color, banner-text);
-    width: 500px;
+    width: 700px;
     margin: auto;
     padding-top: 0.5remall;
 
     @media only screen and (max-width: 800px) {
       width: 90%;
+      font-size: 2.5rem;
     }
   }
 
   &__subtitle {
     font-size: 2rem;
-    font-style: italic;
     font-weight: 300;
-    width: 500px;
+    width: 700px;
     margin: auto;
     background-color: map-get(v.$background-color, banner-text);
 
     @media only screen and (max-width: 800px) {
       width: 90%;
+      font-size: 1.5rem;
     }
   }
 }
@@ -151,6 +152,14 @@ body {
     margin-right: 2.5%;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5vw;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    grid-template-columns: 1fr;
+    grid-gap: 5vw;
   }
 
   img {

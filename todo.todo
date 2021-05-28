@@ -1,13 +1,12 @@
 # use Alt+d for done, or Alt+c for cancelled
 
 Mobile Responsiveness:
-  ☐ Photo gallery to one column 
+  ☐ change cover photo at 650px
   ☐ Adjust font sizes
-  ☐ Reduce margin of about section
-  ☐ Replace banner with hamburger
+  ☐ Replace banner with hamburger at 450px
   Media Queries: 
-    ☐ 990 - go to two columns for photos
-    ☐ 650 - reduce about section margins
+    ☐ 960 - responsive 3 columns of photos.
+    ☐ 650 - tablet - 2 columns for photos.
     ☐ 450 - full mobile
   
 Refactoring: 
