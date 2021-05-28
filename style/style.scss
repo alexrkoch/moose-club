@@ -12,10 +12,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 8px;
+  padding-top: v.$logo-margin;
 
   &__bottom-line {
-    margin-top: 8px;
+    margin-top: v.$logo-margin;
     border: none;
     height: 3px;
     background-color: v.$line-color;
@@ -25,12 +25,16 @@ body {
 .logo-links {
   display: flex;
   justify-content: space-between;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: v.$logo-margin;
+  margin-right: v.$logo-margin;
 }
 
 .logo {
   height: 3rem;
+
+  @media only screen and (max-width: 450px) {
+    height: 2rem;
+  }
 }
 
 .links {
@@ -41,14 +45,27 @@ body {
   margin-left: f.rem(25);
   margin-right: f.rem(25);
 
+  @media only screen and (max-width: 450px) {
+    width: 50%;
+    margin-left: f.rem(25);
+    margin-right: f.rem(10);
+  }
+
   &__link {
     font-size: 1.25rem;
     text-decoration: none;
     color: v.$line-color;
     font-weight: bold;
+
+    @media only screen and (max-width: 450px) {
+      font-size: 1rem;
+    }
   }
-  &__link:hover {
-    text-decoration: underline;
+
+  @media (hover: hover) {
+    &__link:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -58,31 +75,50 @@ body {
   background-image: url("/images/IMG_banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 
+  @media only screen and (max-width: 450px) {
+    background-image: url("/images/IMG_mobile_banner.jpeg");
+    background-position: center;
+    height: 600px;
+  }
+
   &__header {
-    font-size: 4rem;
+    font-size: 3rem;
     background-color: map-get(v.$background-color, banner-text);
     width: 700px;
     margin: auto;
-    padding-top: 0.5remall;
+    padding: 1rem;
 
     @media only screen and (max-width: 800px) {
       width: 90%;
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+      background-color: map-get(v.$background-color, mobile-banner-text);
+      padding: 0.5rem;
     }
   }
 
   &__subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     width: 700px;
+    padding: 1rem;
+    padding-top: 0;
     margin: auto;
     background-color: map-get(v.$background-color, banner-text);
 
     @media only screen and (max-width: 800px) {
       width: 90%;
-      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+      background-color: map-get(v.$background-color, mobile-banner-text);
+      font-size: 1.25rem;
+      padding: 0.5rem;
     }
   }
 }
@@ -94,6 +130,11 @@ body {
   margin-top: f.rem(-1 * (v.$scroll-headbutt));
   padding-bottom: f.rem(v.$scroll-headbutt);
   display: block;
+
+  @media only screen and (max-width: 450px) {
+    margin-top: f.rem(-0.7 * (v.$scroll-headbutt));
+    padding-bottom: f.rem(0.7 * (v.$scroll-headbutt));
+  }
 }
 
 .about {
@@ -186,6 +227,7 @@ figcaption {
     margin-bottom: 0.25rem;
   }
   &__text {
+    width: f.rem(220);
     font-size: 0.75rem;
     text-decoration: none;
     font-weight: normal;
@@ -204,5 +246,17 @@ figcaption {
     height: f.rem(50);
     width: auto;
     color: white;
+
+    @media only screen and (max-width: 450px) {
+      height: f.rem(35);
+    }
+  }
+  &__title {
+    width: f.rem(220);
+    text-align: right;
+
+    @media only screen and (max-width: 450px) {
+      width: f.rem(120);
+    }
   }
 }

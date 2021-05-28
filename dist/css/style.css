@@ -33,6 +33,11 @@ body {
 .logo {
   height: 3rem;
 }
+@media only screen and (max-width: 450px) {
+  .logo {
+    height: 2rem;
+  }
+}
 
 .links {
   display: flex;
@@ -42,14 +47,28 @@ body {
   margin-left: 1.5625rem;
   margin-right: 1.5625rem;
 }
+@media only screen and (max-width: 450px) {
+  .links {
+    width: 50%;
+    margin-left: 1.5625rem;
+    margin-right: 0.625rem;
+  }
+}
 .links__link {
   font-size: 1.25rem;
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
-.links__link:hover {
-  text-decoration: underline;
+@media only screen and (max-width: 450px) {
+  .links__link {
+    font-size: 1rem;
+  }
+}
+@media (hover: hover) {
+  .links__link:hover {
+    text-decoration: underline;
+  }
 }
 
 .welcome {
@@ -58,32 +77,54 @@ body {
   background-image: url("/images/IMG_banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
+@media only screen and (max-width: 450px) {
+  .welcome {
+    background-image: url("/images/IMG_mobile_banner.jpeg");
+    background-position: center;
+    height: 600px;
+  }
+}
 .welcome__header {
-  font-size: 4rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 3rem;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 700px;
   margin: auto;
-  padding-top: 0.5remall;
+  padding: 1rem;
 }
 @media only screen and (max-width: 800px) {
   .welcome__header {
     width: 90%;
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .welcome__header {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem;
   }
 }
 .welcome__subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   width: 700px;
+  padding: 1rem;
+  padding-top: 0;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 @media only screen and (max-width: 800px) {
   .welcome__subtitle {
     width: 90%;
-    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .welcome__subtitle {
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+    padding: 0.5rem;
   }
 }
 
@@ -93,6 +134,14 @@ body {
   margin-top: -5.1875rem;
   padding-bottom: 5.1875rem;
   display: block;
+}
+@media only screen and (max-width: 450px) {
+  #home-page,
+#about-page,
+#photos-page {
+    margin-top: -3.63125rem;
+    padding-bottom: 3.63125rem;
+  }
 }
 
 .about {
@@ -185,6 +234,7 @@ figcaption {
   margin-bottom: 0.25rem;
 }
 .footer__text {
+  width: 13.75rem;
   font-size: 0.75rem;
   text-decoration: none;
   font-weight: normal;
@@ -203,6 +253,20 @@ figcaption {
   height: 3.125rem;
   width: auto;
   color: white;
+}
+@media only screen and (max-width: 450px) {
+  .footer__insta {
+    height: 2.1875rem;
+  }
+}
+.footer__title {
+  width: 13.75rem;
+  text-align: right;
+}
+@media only screen and (max-width: 450px) {
+  .footer__title {
+    width: 7.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

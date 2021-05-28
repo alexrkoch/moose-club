@@ -3,6 +3,8 @@ $line-color: black;
 $scroll-headbutt: 83; // in pixels, converted to rem via f.rem() in style.scss
 $background-color: (
   "main": white,
-  "banner-text": rgba(255, 255, 255, 0.3),
+  "banner-text": rgba(255, 255, 255, 0.6),
+  "mobile-banner-text": rgba(255, 255, 255, 0.6),
   "footer": rgb(141, 141, 141),
 );
+$logo-margin: 8px;
